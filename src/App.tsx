@@ -4,6 +4,7 @@ import {
   MapPin,
   Heart,
   Clock,
+  ChevronDown,
 } from 'lucide-react';
 
 
@@ -441,10 +442,15 @@ export default function App() {
 
           <motion.div
             style={{ opacity }}
-            className="fixed bottom-10 left-1/2 -translate-x-1/2 z-20 pointer-events-none flex flex-col items-center gap-2"
+            className="fixed bottom-10 right-10 z-20 pointer-events-none"
           >
-            <span className="text-[10px] uppercase tracking-[0.4em] text-slate-400">Scroll to explore</span>
-            <div className="w-[1px] h-12 bg-gradient-to-b from-sage-400 to-transparent"></div>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              className="text-sage-400"
+            >
+              <ChevronDown size={28} strokeWidth={1.5} />
+            </motion.div>
           </motion.div>
 
           <Countdown />

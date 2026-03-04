@@ -91,7 +91,7 @@ const EnvelopeSection = ({ onOpen }: { onOpen: () => void }) => {
             className="absolute left-1/2 -translate-x-1/2 text-center pointer-events-none"
             style={{ bottom: '14%' }}
           >
-            <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(14px, 2vw, 20px)', letterSpacing: '0.02em' }}>
+            <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(142x, 2vw, 20px)', letterSpacing: '0.02em' }}>
               ننشرف بحضوركم حفل زفاف
               أروى و كريم
             </p>
@@ -358,7 +358,11 @@ const EventDetails = () => {
 
             <div className="flex items-center justify-center gap-2">
               <MapPin size={16} className="text-sage-400" />
-              <span>Hilton Cairo Heliopolis - Veranda ; outdoor wedding venue</span>
+              <span>Hilton Cairo Heliopolis - Veranda</span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+
+              <span>Outdoor Wedding Venue</span>
             </div>
           </div>
 

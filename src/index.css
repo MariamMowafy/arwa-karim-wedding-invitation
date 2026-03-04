@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-cream-100 text-slate-800 font-sans cursor-default overflow-x-hidden;
+  background-image: url('/images/bg_texture.png');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-serif;
+}
+
+.glass {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+.btn-primary {
+  @apply bg-sage-400 text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-sage-500 active:scale-95 shadow-lg shadow-sage-200;
+}
+
+.btn-outline {
+  @apply border-2 border-sage-400 text-sage-400 px-8 py-3 rounded-full font-medium transition-all hover:bg-sage-50 active:scale-95;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-sage-200 rounded-full hover:bg-sage-300;
+}

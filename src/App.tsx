@@ -401,40 +401,40 @@ const FAQ = () => {
 
 
 const MusicPlayer = () => {
-  // const [isPlaying, setIsPlaying] = useState(false);
-  // const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // const toggleMusic = () => {
-  //   if (!audioRef.current) return;
-  //   if (isPlaying) {
-  //     audioRef.current.pause();
-  //   } else {
-  //     audioRef.current.play().catch(e => console.log("Audio play blocked", e));
-  //   }
-  //   setIsPlaying(!isPlaying);
-  // };
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(e => console.log("Audio play blocked", e));
+    }
+    setIsPlaying(!isPlaying);
+  };
 
-  // return (
-  //   <div className="fixed bottom-8 right-8 z-40">
-  //     <audio ref={audioRef} loop src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" />
-  //     <button
-  //       onClick={toggleMusic}
-  //       className={`w-14 h-14 rounded-full flex items-center justify-center transition-all ${isPlaying ? 'bg-sage-400 scale-110 shadow-xl' : 'bg-white/80 backdrop-blur shadow-md'}`}
-  //     >
-  //       {isPlaying ? (
-  //         <Volume2 className="text-white animate-pulse" />
-  //       ) : (
-  //         <VolumeX className="text-sage-400" />
-  //       )}
-  //     </button>
+  return (
+    <div className="fixed bottom-8 right-8 z-40">
+      <audio ref={audioRef} loop src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" />
+      <button
+        onClick={toggleMusic}
+        className={`w-14 h-14 rounded-full flex items-center justify-center transition-all ${isPlaying ? 'bg-sage-400 scale-110 shadow-xl' : 'bg-white/80 backdrop-blur shadow-md'}`}
+      >
+        {isPlaying ? (
+          <Volume2 className="text-white animate-pulse" />
+        ) : (
+          <VolumeX className="text-sage-400" />
+        )}
+      </button>
 
-  //     {isPlaying && (
-  //       <div className="absolute -top-12 right-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-sage-400 whitespace-nowrap border border-sage-100 shadow-sm transition-all animate-fade-up">
-  //         Playing: Romantic Waltz
-  //       </div>
-  //     )}
-  //   </div>
-  // );
+      {isPlaying && (
+        <div className="absolute -top-12 right-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-sage-400 whitespace-nowrap border border-sage-100 shadow-sm transition-all animate-fade-up">
+          Playing: Romantic Waltz
+        </div>
+      )}
+    </div>
+  );
 };
 
 const Footer = () => {
@@ -502,7 +502,7 @@ export default function App() {
 
           <Footer />
 
-          <MusicPlayer />
+          {/* <MusicPlayer /> */}
         </motion.main>
       )}
     </div>

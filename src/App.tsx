@@ -358,7 +358,7 @@ const EventDetails = () => {
 
             <div className="flex items-center justify-center gap-2">
               <MapPin size={16} className="text-sage-400" />
-              <span>Hilton Cairo Heliopolis</span>
+              <span>Hilton Cairo Heliopolis - Veranda Hall</span>
             </div>
           </div>
 

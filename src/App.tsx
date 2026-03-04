@@ -1,13 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import {
   MapPin,
-  Music,
-  ChevronDown,
   Heart,
   Clock,
-  Volume2,
-  VolumeX,
 } from 'lucide-react';
 
 
@@ -380,19 +376,10 @@ const EventDetails = () => {
 };
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqs = [
-    { q: "Can I bring a plus one?", a: "Your invitation will specify the number of seats we've reserved for you. Please check your physical invitation or the RSVP section for details." },
-    { q: "Are kids welcome?", a: "While we love your little ones, our wedding will be an adults-only event so that everyone can relax and enjoy the celebration." },
-  ];
-
   return (
     <section className="py-32 bg-sage-50/50 backdrop-blur-md">
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="text-4xl font-serif text-center mb-16 ">✨مع أطيب الأمنيات لأطفالكم بنومٍ هادئٍ  </h2>
-
-
       </div>
     </section>
   );
@@ -400,42 +387,7 @@ const FAQ = () => {
 
 
 
-const MusicPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const toggleMusic = () => {
-    if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play().catch(e => console.log("Audio play blocked", e));
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  return (
-    <div className="fixed bottom-8 right-8 z-40">
-      <audio ref={audioRef} loop src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" />
-      <button
-        onClick={toggleMusic}
-        className={`w-14 h-14 rounded-full flex items-center justify-center transition-all ${isPlaying ? 'bg-sage-400 scale-110 shadow-xl' : 'bg-white/80 backdrop-blur shadow-md'}`}
-      >
-        {isPlaying ? (
-          <Volume2 className="text-white animate-pulse" />
-        ) : (
-          <VolumeX className="text-sage-400" />
-        )}
-      </button>
-
-      {isPlaying && (
-        <div className="absolute -top-12 right-0 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-sage-400 whitespace-nowrap border border-sage-100 shadow-sm transition-all animate-fade-up">
-          Playing: Romantic Waltz
-        </div>
-      )}
-    </div>
-  );
-};
 
 const Footer = () => {
   return (
@@ -502,7 +454,7 @@ export default function App() {
 
           <Footer />
 
-          {/* <MusicPlayer /> */}
+
         </motion.main>
       )}
     </div>

@@ -251,11 +251,11 @@ const Hero = () => {
         <p className="text-sage-400 font-serif italic text-xl md:text-xl mb-12 px-6">
           بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
         </p>
-        <p className="text-sage-400 font-serif italic text-xl md:text-xl mb-12 px-6">
+        <p className="text-sage-400 font-serif italic text-l md:text-xl mb-12 px-6">
 
-          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا  ‎﴿     </p>
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا  ‎﴿
 
-        <p className="text-sage-400 font-serif italic text-xl md:text-xl mb-12 px-6">
+          <br />
 
           ‎﴾  إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً     </p>
         {/* <p className="text-slate-500 font-serif italic text-l md:text-xl mb-12 px-6">
@@ -268,11 +268,11 @@ const Hero = () => {
         </h1>
         <span className="text-sage-400 uppercase tracking-[0.4em] text-xs mb-6 block font-medium">April 04, 2026 - 3:30 PM</span>
 
-        <div className="w-16 h-[1px] bg-sage-200 mx-auto mb-8 relative">
+        <div className="w-16 h-[1px] bg-sage-200 mx-auto mb-4 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rotate-45 border border-sage-200 bg-cream-100"></div>
         </div>
-        <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(24px, 2vw, 20px)', letterSpacing: '0.02em' }}>
-          نشرف بحضوركم حفل زفاف
+        <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(20px, 2vw, 20px)', letterSpacing: '0.02em' }}>
+          نتشرف بحضوركم حفل زفاف
           أروى و كريم
         </p>
 

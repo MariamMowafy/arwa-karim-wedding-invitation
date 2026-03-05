@@ -91,10 +91,10 @@ const EnvelopeSection = ({ onOpen }: { onOpen: () => void }) => {
             className="absolute left-1/2 -translate-x-1/2 text-center pointer-events-none"
             style={{ bottom: '14%' }}
           >
-            <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(142x, 2vw, 20px)', letterSpacing: '0.02em' }}>
+            {/* <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(142x, 2vw, 20px)', letterSpacing: '0.02em' }}>
               ننشرف بحضوركم حفل زفاف
               أروى و كريم
-            </p>
+            </p> */}
           </motion.div>
         </div>
 
@@ -183,7 +183,7 @@ const EnvelopeSection = ({ onOpen }: { onOpen: () => void }) => {
               <img src="/images/logo-gold.png" alt="A&K Monogram" style={{ width: '80px', opacity: 0.7 }} />
               <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(150,138,118,0.4)' }} />
               <p className="font-serif italic text-center" style={{ color: 'rgba(100,92,78,0.7)', fontSize: '14px', letterSpacing: '0.04em' }}>Arwa &amp; Karim</p>
-              <p className="font-sans uppercase text-center" style={{ color: 'rgba(130,120,100,0.5)', fontSize: '10px', letterSpacing: '0.3em' }}>April 4, 2026 - 3:00 PM</p>
+              <p className="font-sans uppercase text-center" style={{ color: 'rgba(130,120,100,0.5)', fontSize: '10px', letterSpacing: '0.3em' }}>April 4, 2026 - 3:30 PM</p>
             </div>
           </motion.div>
         </div>
@@ -247,25 +247,35 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="text-center z-10 max-w-2xl"
       >
+
+        <p className="text-sage-400 font-serif italic text-xl md:text-xl mb-12 px-6">
+          بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
+        </p>
+        <p className="text-sage-400 font-serif italic text-xl md:text-xl mb-12 px-6">
+
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا  ‎﴿     </p>
+
+        <p className="text-sage-400 font-serif italic text-xl md:text-xl mb-12 px-6">
+
+          ‎﴾  إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً     </p>
+        {/* <p className="text-slate-500 font-serif italic text-l md:text-xl mb-12 px-6">
+
+          سورة الروم – الآية ٢١         </p> */}
         <span className="text-sage-400 uppercase tracking-[0.4em] text-xs mb-6 block font-medium">We are getting married</span>
+
         <h1 className="text-6xl md:text-8xl font-serif text-slate-800 leading-tight mb-8">
           Arwa <span className="italic block md:inline text-sage-400 serif">&</span> Karim
         </h1>
-        <span className="text-sage-400 uppercase tracking-[0.4em] text-xs mb-6 block font-medium">April 04, 2026 - 3:00 PM</span>
+        <span className="text-sage-400 uppercase tracking-[0.4em] text-xs mb-6 block font-medium">April 04, 2026 - 3:30 PM</span>
 
         <div className="w-16 h-[1px] bg-sage-200 mx-auto mb-8 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rotate-45 border border-sage-200 bg-cream-100"></div>
         </div>
-
-        <p className="text-slate-500 font-serif italic text-l md:text-xl mb-12 px-6">
-          بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
+        <p className="font-serif italic" style={{ color: 'rgba(120,110,95,0.7)', fontSize: 'clamp(24px, 2vw, 20px)', letterSpacing: '0.02em' }}>
+          نشرف بحضوركم حفل زفاف
+          أروى و كريم
         </p>
-        <p className="text-slate-500 font-serif italic text-l md:text-xl mb-12 px-6">
 
-          ‎﴾ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً  ‎﴿      </p>
-        <p className="text-slate-500 font-serif italic text-l md:text-xl mb-12 px-6">
-
-          سورة الروم – الآية ٢١         </p>
       </motion.div>
 
       {/* <motion.div
@@ -289,7 +299,7 @@ const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState<CountdownTime>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const targetDate = new Date('2026-04-04T15:00:00');
+    const targetDate = new Date('2026-04-04T15:30:00');
 
     const interval = setInterval(() => {
       const now = new Date();
@@ -353,7 +363,7 @@ const EventDetails = () => {
           <div className="space-y-4 text-slate-600 mb-10">
             <div className="flex items-center justify-center gap-2">
               <Clock size={16} className="text-sage-400" />
-              <span>Saturday, April 4, 2026 at 3:00 PM</span>
+              <span>Saturday, April 4, 2026 at 3:30 PM</span>
             </div>
 
             <div className="flex items-center justify-center gap-2">
@@ -382,9 +392,9 @@ const EventDetails = () => {
 
 const FAQ = () => {
   return (
-    <section className="py-32 bg-sage-50/50 backdrop-blur-md">
+    <section className="py-5 bg-sage-50/50 backdrop-blur-md">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-4xl font-serif text-center mb-16 ">✨مع أطيب الأمنيات لأطفالكم بنومٍ هادئٍ  </h2>
+        {/* <h2 className="text-4xl font-serif text-center mb-16 text-sage-400 ">✨مع أطيب الأمنيات لأطفالكم بنومٍ هادئٍ ✨ </h2> */}
       </div>
     </section>
   );
